@@ -12,7 +12,7 @@ extern int yylineno;
     char *sval;
 }
 
-%token VAR IF ELSE
+%token LET IF ELSE
 %token <sval> IDENTIFIER
 %token <ival> NUMBER
 %token ASSIGN PLUS MINUS MULTIPLY DIVIDE GT LT LBRACE RBRACE SEMICOLON LPAREN RPAREN
@@ -43,7 +43,7 @@ block:
     ;
 
 var_decl:
-    VAR IDENTIFIER SEMICOLON { printf("Parsed var_decl.\n"); free($2); }
+    LET IDENTIFIER SEMICOLON { printf("Parsed var_decl.\n"); free($2); }  // Changed VAR to LET
     ;
 
 assignment:

@@ -54,7 +54,7 @@ extern int yydebug;
     YYEOF = 0,                     /* "end of file"  */
     YYerror = 256,                 /* error  */
     YYUNDEF = 257,                 /* "invalid token"  */
-    VAR = 258,                     /* VAR  */
+    LET = 258,                     /* LET  */
     IF = 259,                      /* IF  */
     ELSE = 260,                    /* ELSE  */
     IDENTIFIER = 261,              /* IDENTIFIER  */

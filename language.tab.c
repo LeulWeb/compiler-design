@@ -107,7 +107,7 @@ enum yysymbol_kind_t
   YYSYMBOL_YYEOF = 0,                      /* "end of file"  */
   YYSYMBOL_YYerror = 1,                    /* error  */
   YYSYMBOL_YYUNDEF = 2,                    /* "invalid token"  */
-  YYSYMBOL_VAR = 3,                        /* VAR  */
+  YYSYMBOL_LET = 3,                        /* LET  */
   YYSYMBOL_IF = 4,                         /* IF  */
   YYSYMBOL_ELSE = 5,                       /* ELSE  */
   YYSYMBOL_IDENTIFIER = 6,                 /* IDENTIFIER  */
@@ -540,7 +540,7 @@ static const char *yysymbol_name (yysymbol_kind_t yysymbol) YY_ATTRIBUTE_UNUSED;
    First, the terminals, then, starting at YYNTOKENS, nonterminals.  */
 static const char *const yytname[] =
 {
-  "\"end of file\"", "error", "\"invalid token\"", "VAR", "IF", "ELSE",
+  "\"end of file\"", "error", "\"invalid token\"", "LET", "IF", "ELSE",
   "IDENTIFIER", "NUMBER", "ASSIGN", "PLUS", "MINUS", "MULTIPLY", "DIVIDE",
   "GT", "LT", "LBRACE", "RBRACE", "SEMICOLON", "LPAREN", "RPAREN",
   "LOWER_THAN_ELSE", "$accept", "program", "statements", "statement",
@@ -1156,7 +1156,7 @@ yyreduce:
 #line 1157 "language.tab.c"
     break;
 
-  case 10: /* var_decl: VAR IDENTIFIER SEMICOLON  */
+  case 10: /* var_decl: LET IDENTIFIER SEMICOLON  */
 #line 46 "language.y"
                              { printf("Parsed var_decl.\n"); free((yyvsp[-1].sval)); }
 #line 1163 "language.tab.c"

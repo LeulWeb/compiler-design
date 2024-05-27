@@ -7,7 +7,7 @@ extern int yylineno;
 %}
 
 %%
-"var"           { return VAR; }
+"let"           { return LET; }         // Changed "var" to "let"
 "if"            { return IF; }
 "else"          { return ELSE; }
 [a-zA-Z_][a-zA-Z0-9_]* {
@@ -31,5 +31,6 @@ extern int yylineno;
 "("             { return LPAREN; }
 ")"             { return RPAREN; }
 [ \t\n]         { /* Ignore whitespace */ }
+"#"[^\n]*       { /* Ignore comments */ } // Added rule to ignore comments
 .               { return yytext[0]; }
 %%

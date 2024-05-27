@@ -1,4 +1,4 @@
-var x;
+let x;
 x = 10 + 2 * 3;
 if (x > 10) {
     x = x - 1;
@@ -6,7 +6,7 @@ if (x > 10) {
     x = x + 1;
 }
 
-var y;
+let y;
 y = 5;
 if (y < 10) {
     y = y + 10;
@@ -14,5 +14,9 @@ if (y < 10) {
     y = y - 5;
 }
 
-var z;
+let z;
 z = x + y;
+
+# This is a comment
+let a;
+a = 3;

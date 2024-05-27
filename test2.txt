@@ -1,0 +1,37 @@
+# Variable declarations
+let x;
+let y;
+
+# Assigning values to variables
+x = 10 + 2 * 3;
+if (x > 10) {
+    x = x - 1;
+} else {
+    x = x + 1;
+}
+
+# Another variable declaration
+let y;
+y = 5;
+
+# Conditional statement with else
+if (y < 10) {
+    y = y + 10;
+} else {
+    y = y - 5;
+}
+
+# Using variables in expressions
+let z;
+z = x + y;
+
+# While loop example
+let i;
+i = 0;
+while (i < 10) {
+    i = i + 1;
+}
+
+# This is a comment
+let a;
+a = 3;

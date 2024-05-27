@@ -57,21 +57,22 @@ extern int yydebug;
     LET = 258,                     /* LET  */
     IF = 259,                      /* IF  */
     ELSE = 260,                    /* ELSE  */
-    IDENTIFIER = 261,              /* IDENTIFIER  */
-    NUMBER = 262,                  /* NUMBER  */
-    ASSIGN = 263,                  /* ASSIGN  */
-    PLUS = 264,                    /* PLUS  */
-    MINUS = 265,                   /* MINUS  */
-    MULTIPLY = 266,                /* MULTIPLY  */
-    DIVIDE = 267,                  /* DIVIDE  */
-    GT = 268,                      /* GT  */
-    LT = 269,                      /* LT  */
-    LBRACE = 270,                  /* LBRACE  */
-    RBRACE = 271,                  /* RBRACE  */
-    SEMICOLON = 272,               /* SEMICOLON  */
-    LPAREN = 273,                  /* LPAREN  */
-    RPAREN = 274,                  /* RPAREN  */
-    LOWER_THAN_ELSE = 275          /* LOWER_THAN_ELSE  */
+    WHILE = 261,                   /* WHILE  */
+    IDENTIFIER = 262,              /* IDENTIFIER  */
+    NUMBER = 263,                  /* NUMBER  */
+    ASSIGN = 264,                  /* ASSIGN  */
+    PLUS = 265,                    /* PLUS  */
+    MINUS = 266,                   /* MINUS  */
+    MULTIPLY = 267,                /* MULTIPLY  */
+    DIVIDE = 268,                  /* DIVIDE  */
+    GT = 269,                      /* GT  */
+    LT = 270,                      /* LT  */
+    LBRACE = 271,                  /* LBRACE  */
+    RBRACE = 272,                  /* RBRACE  */
+    SEMICOLON = 273,               /* SEMICOLON  */
+    LPAREN = 274,                  /* LPAREN  */
+    RPAREN = 275,                  /* RPAREN  */
+    LOWER_THAN_ELSE = 276          /* LOWER_THAN_ELSE  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -85,7 +86,7 @@ union YYSTYPE
     int ival;
     char *sval;
 
-#line 89 "language.tab.h"
+#line 90 "language.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

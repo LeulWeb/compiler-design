@@ -12,7 +12,7 @@ extern int yylineno;
     char *sval;
 }
 
-%token LET IF ELSE
+%token LET IF ELSE WHILE
 %token <sval> IDENTIFIER
 %token <ival> NUMBER
 %token ASSIGN PLUS MINUS MULTIPLY DIVIDE GT LT LBRACE RBRACE SEMICOLON LPAREN RPAREN
@@ -35,6 +35,7 @@ statement:
     var_decl { printf("Parsed variable declaration.\n"); }
     | assignment { printf("Parsed assignment.\n"); }
     | if_statement { printf("Parsed if statement.\n"); }
+    | while_statement { printf("Parsed while statement.\n"); }  // Added while_statement
     | block { printf("Parsed block.\n"); }
     ;
 
@@ -43,7 +44,7 @@ block:
     ;
 
 var_decl:
-    LET IDENTIFIER SEMICOLON { printf("Parsed var_decl.\n"); free($2); }  // Changed VAR to LET
+    LET IDENTIFIER SEMICOLON { printf("Parsed var_decl.\n"); free($2); }
     ;
 
 assignment:
@@ -53,6 +54,10 @@ assignment:
 if_statement:
     IF LPAREN condition RPAREN statement %prec LOWER_THAN_ELSE { printf("Parsed if without else.\n"); }
     | IF LPAREN condition RPAREN statement ELSE statement { printf("Parsed if with else.\n"); }
+    ;
+
+while_statement:
+    WHILE LPAREN condition RPAREN statement { printf("Parsed while statement.\n"); }  // Added while loop rule
     ;
 
 condition:

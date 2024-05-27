@@ -7,9 +7,10 @@ extern int yylineno;
 %}
 
 %%
-"let"           { return LET; }         // Changed "var" to "let"
+"let"           { return LET; }
 "if"            { return IF; }
 "else"          { return ELSE; }
+"while"         { return WHILE; }  // Added while keyword
 [a-zA-Z_][a-zA-Z0-9_]* {
                         yylval.sval = strdup(yytext);
                         return IDENTIFIER;
@@ -31,6 +32,6 @@ extern int yylineno;
 "("             { return LPAREN; }
 ")"             { return RPAREN; }
 [ \t\n]         { /* Ignore whitespace */ }
-"#"[^\n]*       { /* Ignore comments */ } // Added rule to ignore comments
+"#"[^\n]*       { /* Ignore comments */ }
 .               { return yytext[0]; }
 %%
